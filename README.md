@@ -376,7 +376,13 @@ MIT License - See LICENSE file for details
 
 ** Development Team**
 
----
+
+
+
+---<img width="1918" height="859" alt="Screenshot 2025-12-03 175656" src="https://github.com/user-attachments/assets/473634fa-8569-42f8-8594-8b6890cfc1fb" />
+<img width="1366" height="882" alt="Screenshot 2025-12-03 182113" src="https://github.com/user-attachments/assets/bd9b76cc-1ef0-4a4b-a245-997c6a19cd4b" />
+
+<img width="1377" height="922" alt="Screenshot 2025-12-03 182511" src="https://github.com/user-attachments/assets/c34bbbf2-0007-4d12-9c00-d1eaef3257cc" />
 
 ## 🎓 Learning Resources
 
