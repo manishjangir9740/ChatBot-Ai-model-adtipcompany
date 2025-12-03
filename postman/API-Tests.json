@@ -1,0 +1,272 @@
+{
+  "info": {
+    "name": "AI Chatbot API - Manish Kumar",
+    "description": "Complete API testing collection for the AI Chatbot application",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "12345678"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["health"]
+        },
+        "description": "Check if the server is running and healthy"
+      },
+      "response": []
+    },
+    {
+      "name": "Root Endpoint",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": [""]
+        },
+        "description": "Get API information and available endpoints"
+      },
+      "response": []
+    },
+    {
+      "name": "Send Chat Message - Hello",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"message\": \"Hello\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/chat",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "chat"]
+        },
+        "description": "Send a simple greeting message"
+      },
+      "response": []
+    },
+    {
+      "name": "Send Chat Message - Question",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"message\": \"What can you help me with?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/chat",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "chat"]
+        },
+        "description": "Ask the bot what it can do"
+      },
+      "response": []
+    },
+    {
+      "name": "Send Chat Message - About ADtip",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"message\": \"Tell me about Company\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/chat",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "chat"]
+        },
+        "description": "Ask about the company"
+      },
+      "response": []
+    },
+    {
+      "name": "Send Chat Message - Time",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"message\": \"What is the current time?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/chat",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "chat"]
+        },
+        "description": "Ask for current time"
+      },
+      "response": []
+    },
+    {
+      "name": "Send Chat Message - Empty (Error Test)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"message\": \"\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/chat",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "chat"]
+        },
+        "description": "Test error handling with empty message"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Chat History",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/history",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "history"]
+        },
+        "description": "Retrieve all chat history"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Chat History - Limited",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/history?limit=10",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "history"],
+          "query": [
+            {
+              "key": "limit",
+              "value": "10",
+              "description": "Limit number of results"
+            }
+          ]
+        },
+        "description": "Get last 10 chat messages"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Chat Statistics",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/stats",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "stats"]
+        },
+        "description": "Get chatbot usage statistics"
+      },
+      "response": []
+    },
+    {
+      "name": "Clear Chat History",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/history",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "history"]
+        },
+        "description": "Delete all chat history from database"
+      },
+      "response": []
+    },
+    {
+      "name": "Test 404 - Invalid Endpoint",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/invalid",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "invalid"]
+        },
+        "description": "Test 404 error handling"
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5000",
+      "type": "string"
+    },
+    {
+      "key": "apiUrl",
+      "value": "http://localhost:5000/api",
+      "type": "string"
+    }
+  ]
+}
+
